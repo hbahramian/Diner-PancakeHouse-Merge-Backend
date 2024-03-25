@@ -10,10 +10,8 @@ import java.util.ArrayList;
 
 @Component
 public class MergerRepository {
-    ArrayList<Menu> menus;
-
     public  ArrayList<Menu> getTheMenus() {
-        menus = new ArrayList<>();
+        ArrayList<Menu> menus = new ArrayList<>();
         menus.add(new DinerMenu());
         menus.add(new PancakeHouseMenu());
         menus.add(new CafeMenu());
