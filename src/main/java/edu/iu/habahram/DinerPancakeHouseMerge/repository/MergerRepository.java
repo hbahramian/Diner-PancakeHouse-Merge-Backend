@@ -25,4 +25,6 @@ public class MergerRepository {
                         x.getPrice())).toList();
         return records;
     }
+
+
 }
