@@ -4,11 +4,9 @@ import java.util.*;
 
 public class CompositeIterator implements Iterator<MenuComponent> {
     Stack<Iterator<MenuComponent>> stack = new Stack<Iterator<MenuComponent>>();
-
     public CompositeIterator(Iterator<MenuComponent> iterator) {
         stack.push(iterator);
     }
-
     public MenuComponent next() {
         if (hasNext()) {
             Iterator<MenuComponent> iterator = stack.peek();
@@ -19,7 +17,6 @@ public class CompositeIterator implements Iterator<MenuComponent> {
             return null;
         }
     }
-
     public boolean hasNext() {
         if (stack.empty()) {
             return false;
